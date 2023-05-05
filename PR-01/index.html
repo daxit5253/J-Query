@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+
+
+    <title>Jquery PR-01</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 1 -->
+
+        <p class="title">1. On Click of a button, welcome message should display.</p>
+
+                <div class="center">
+                    <p class="txt1">WELCOME</p>
+                </div>
+
+                <div class="center">
+                    <button class="btn1">Click me</button>
+                </div>
+
+            <hr>
+
+        <!-- 2 -->
+
+        <p class="title">2. There are three input textboxes. On click of the input box, background color should change to yellow.</p>
+
+                <div class="div-2 center">
+                    <input type="text" name="textbox-1" class="box1">
+                    <input type="text" name="textbox-1" class="box1">
+                    <input type="text" name="textbox-1" class="box1">
+
+                </div>
+
+            <hr>
+
+        <!-- 3 -->
+
+        <p class="title">3.Remove and add different style to the element by using JQuery. Create two style properties and by default apply first one to one element. On click of a button change the elements associated property to other style.</p>
+        
+                <div class="line-box">
+                    <p class="l-txt-1">Line 1. Remove and add different style</p>
+                    <p class="l-txt-2">Line 2. Remove and add different style</p>
+                    <p class="l-txt-3">Line 3. Remove and add different style</p>
+                    <p class="l-txt-4">Line 4. Remove and add different style</p>
+                    <p class="l-txt-5">Line 5. Remove and add different style</p>
+                </div>
+
+                <div class="center">
+                <button class="line1">Line 1</button>
+                <button class="line2">Line 2</button>
+                <button class="line3">Line 3</button>
+                <button class="line4">Line 4</button>
+                <button class="line5">Line 5</button>
+                </div>
+        <hr>
+
+        <!-- 4 -->
+
+        <p class="title">4. Toggle the style properties of the element on click.</p>
+
+                <div class="p-container">
+                    <p class="p-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis delectus nemo velit temporibus, iure culpa obcaecati fugit dicta molestias modi totam omnis deleniti accusamus quia asperiores ut sequi assumenda nihil Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel corporis, eum similique ducimus ratione quidem facilis voluptatum magnam sed. Ratione dolores, culpa fuga similique suscipit natus nam necessitatibus obcaecati dolore.</p>
+                </div>
+
+                <div class="center">
+                    <button class="btn2">Click me</button>
+                </div>
+        
+        <hr>
+
+        <!-- 5 -->
+
+        <p class="title2">5. Take two Button and on double click some text will hide and show</B></p>
+
+            <div class="box3">
+                <p class="txt3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa obcaecati dignissimos quae voluptatibus aspernatur, sint, iusto ut dicta officiis temporibus fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ex sequi odit, suscipit numquam harum adipisci nihil ut. Dolor praesentium sed nostrum aut voluptatibus eos, perferendis atque ratione assumenda possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias obcaecati, itaque dolores odio delectus quibusdam? Ipsum eveniet quibusdam vel cumque. Voluptas suscipit quas ipsum, delectus ducimus autem amet tempore? similique quisquam, alias cupiditate sunt repudiandae. Saepe, ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores amet eligendi, nam enim dolorem cumque suscipit alias commodi nihil sint iusto id praesentium hic expedita doloribus officia! Dolor, deleniti vel.</p>   
+            </div>
+
+
+            <div class="center">
+                <button class="btn3">Hide</button>
+                <button class="btn4 ml-20">Show</button>
+
+            </div>
+
+
+    </div>
+
+    <script>
+
+
+
+        $('.btn1').click(function(){
+
+            $('.txt1').css('color', 'blue');
+        });
+
+        $(".box1").keypress(function (){
+                $(this).css ('background-color', 'yellow');
+            });
+
+        $(".box1").keyup(function (){
+                $(this).css ('background-color', 'aliceblue');
+            });
+
+        $(".box1").keydown(function (){
+                $(this).css ('background-color', 'orange');
+            });
+
+            $('.line1').click(function(){
+                $('.l-txt-1').css('color', 'darkgreen');
+                $('.l-txt-1').css('font-size', '19px');
+                $('.l-txt-1').css('font-weight', 'bold');
+            });
+
+            $('.line2').click(function(){
+                $('.l-txt-2').slideToggle('fast');
+            });
+
+            $('.line3').click(function(){
+                $('.l-txt-3').fadeToggle('fast');
+            });
+
+            $('.line4').click(function(){
+                $('.l-txt-4').css('color', 'orange');
+                $('.l-txt-4').css('font-size', '19px');
+                $('.l-txt-4').css('font-weight', 'bold');
+            });
+
+            $('.line5').click(function(){
+                $('.l-txt-5').css('color', 'purple');
+                $('.l-txt-5').css('font-size', '19px');
+                $('.l-txt-5').css('font-weight', 'bold');
+            });
+
+        $('.btn2').click(function(){
+                $('.p-container').toggleClass('txtcss');
+            });
+
+            $('.btn3').dblclick (function (){
+                $('.txt3').hide();
+            });
+
+            $('.btn4').dblclick (function (){
+                $('.txt3').show();
+            });
+
+    </script>
+    
+</body>
+</html>

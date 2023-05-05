@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/01 Events</title>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script> -->
+
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+                <div class="box">
+                    <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa obcaecati dignissimos quae voluptatibus aspernatur, sint, iusto ut dicta officiis temporibus fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ex sequi odit, suscipit numquam harum adipisci nihil ut. Dolor praesentium sed nostrum aut voluptatibus eos, perferendis atque ratione assumenda possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias obcaecati, itaque dolores odio delectus quibusdam? Ipsum eveniet quibusdam vel cumque. Voluptas suscipit quas ipsum, delectus ducimus autem amet tempore? similique quisquam, alias cupiditate sunt repudiandae. Saepe, ipsam aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores amet eligendi, nam enim dolorem cumque suscipit alias commodi nihil sint iusto id praesentium hic expedita doloribus officia! Dolor, deleniti vel.</p>   
+                </div>
+
+                <div class="box-2">
+                        <p>------ MOUSE-EVENTS ------</p>
+                </div>
+
+                
+                <div class="box-3">
+                    <button class="btn1">Click</button>
+                    <button class="btn2"> Double Click</button>
+                    <button class="btn3"> Mouse Enter</button>
+                    <button class="btn4"> Mouse Leave</button>
+                </div>
+
+                
+                <div class="box-2">
+                    <p>------ TEXT-SHOW-HIDE ------</p>
+                </div>
+
+            
+            <div class="box-3">
+                <button class="hide">Hide</button>
+                <button class="show">Show</button>
+            </div>
+
+                <div class="box-2">
+                    <p>------ KEY-EVENTS ------</p>
+                </div>
+
+                <div class="box-3">
+                    <input type="text" class="uname1">
+                    <input type="text" class="uname1">
+                    <input type="text" class="uname1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ">
+                </div>
+
+    
+                
+
+    <!-- script-start -->
+
+    <script>
+
+        // mouse events //
+
+                // click 
+
+        $(".btn1").click(function(){
+
+            $(".txt").css("color","red");
+            $(".btn1").css("background-color","red");
+
+        });
+
+                  // Double-click 
+
+                  $(".btn2").dblclick(function(){
+
+                    $(".txt").css("color","blue");
+                    $(".btn2").css("background-color","blue");
+
+                    });
+
+            // Mouse-Enter
+
+            $(".btn3").mouseenter(function(){
+
+            $(".txt").css("color","yellow");
+            $(".btn3").css("background-color","yellow");
+
+            });
+
+                    // Mouse-leave
+
+                    $(".btn4").mouseleave(function(){
+
+                    $(".txt").css("color","pink");
+                    $(".btn4").css("background-color","pink");
+
+                    });
+
+            // KEY-EVENTS //
+
+            $(".uname1").keypress(function (){
+                $('.uname1').css ('background-color', 'lightgreen');
+            });
+
+            $(".uname1").keyup(function (){
+                $('.uname1').css ('background-color', 'lightblue');
+            });
+
+            $(".uname1").keydown(function (){
+                $('.uname1').css ('background-color', 'orange');
+            });
+
+            // SHOW-HIDE //
+
+            $('.hide').click (function (){
+                $('.txt').hide();
+            });
+
+            $('.show').click (function (){
+                $('.txt').show();
+            });
+
+
+      
+    </script>
+    
+</body>
+</html>

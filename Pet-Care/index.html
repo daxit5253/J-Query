@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>PetLover - Pet Care.com</title>
+    <link rel="icon" href="/img/logo.png" type="image/icon type">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- font-awesome-cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- .css-file -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/utillity.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="media/media.css">
+
+    <!-- js / script -->
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js">
+
+    <!-- counter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.33.3/tsparticles.min.js"></script>
+
+
+
+</head>
+<body>
+
+    <!-- scroll-top-btn -->
+    <button type="button" class="scroll" onclick="getontop()"><i class="fa fa-angle-double-up"></i></button>
+
+    <!-- loader -->
+    <div class="loader">
+    <svg class="loader-icon" width='100px' height='100px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-default"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(0 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(30 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.041666666666666664s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(60 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.08333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(90 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.125s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(120 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.16666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(150 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.20833333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(180 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.25s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(210 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.2916666666666667s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(240 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.3333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(270 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.375s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(300 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.4166666666666667s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#ed6436' transform='rotate(330 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='0.5s' begin='0.4583333333333333s' repeatCount='indefinite'/></rect></svg>    </div>
+
+    <!-- Pointer -->
+            <div class="pointer"></div>
+            <div class="pointer"></div>
+            <div class="pointer"></div>
+            <div class="pointer"></div>
+            <div class="pointer"></div>
+            
+    <!-- web-line-1-green-start (section-1.1) -->
+
+    <section class="web-line-1">
+        <div class="web-line-main-div d-flex">
+
+            <div class="web-line-text nunito-regular">
+                <a href="#">FAQs</a>
+                <span>|</span>
+                <a href="#">Help</a>
+                <span>|</span>
+                <a href="#">Support</a>
+            </div>
+            <div class="web-line-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </section>
+    <!-- web-line-1-green-over -->
+
+    <!-- header-start (section-1.2)-->
+
+    <header class="d-flex header-media">
+        <div class="logo d-flex">
+            <p>Pet</p><span>Lover</span>
+        </div>
+
+        <div class="d-flex header-add">
+            <div class="add-side-border">
+                <p class="line-1">Opening Hours</p>
+                <p class="line-2">8.00AM - 9.00PM</p>
+            </div>
+            <div class="add-side-border">
+                <p class="line-1">Email Us</p>
+                <p class="line-2">info@example.com</p>
+            </div>
+            <div>
+                <p class="line-1">Call Us</p>
+                <p class="line-2">+012 345 6789</p>
+            </div>
+        </div>
+    </header>
+    <!-- header-over -->
+
+    <!-- nav-bar-start (section-1.3)-->
+
+
+    <div class="d-flex nav-bar">
+
+            <div class="navigations">
+                <a href="#" class="home">Home</a>
+                <a href="#" class="nav-men">About</a>
+                <a href="#" class="nav-menu">Service</a>
+                <a href="#" class="nav-menu">Price</a>
+                <a href="#" class="nav-menu">Booking</a>
+                <a href="#" class="nav-menu">Pages</a>
+                <a href="#" class="nav-menu">Contact</a>   
+            </div>
+        
+        <div class="nav-btn-div">
+            <button class="nav-btn">Get Quote</button>
+            <div class="logo-2">
+                <p>Pet</p><span>Lover</span>
+            </div>
+        </div>
+
+    <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+
+    </div>
+
+    <!-- nav-bar-over -->
+
+    <!-- banner-start (section-2)-->
+           
+                <div class="relative d-flex justify-center banner">
+                    <img src="/img/carousel-2.jpg" class="banner-img" width="100%">
+
+                    <div class="banner-text absolute">
+                        
+                            <h3 class="t-28 banner-line-1 nunito-regular text-white m-16">Best Pet Services</h3>
+                            <h1 class=" t-72 banner-line-2 nunito-regular text-white m-16">Keep Your Pet Happy</h1>
+                            <h5 class="t-20 banner-line-3 nunito-regular text-white m-16">Duo nonumy et dolor tempor no et. Diam sit diam sit diam erat</h5>
+                           
+                            <div class="mt-70">
+                                <button class="banner-btn-1">Book Now</button>
+                                <button class="banner-btn-2">Learn More</button>
+                            </div>
+                   </div>
+                </div>
+    <!-- banner-end -->
+
+    <!-- booking-start (section-3)-->
+    <div class="booking">
+
+                <div class="form-container">
+
+                    <div class="d-flex justify-center form-media">
+
+                        <div class="form-bg">
+                            <form class="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                    </div>
+                                        <div class="form-group">
+                                            <div class="date" id="date" data-target-input="nearest">
+                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Date" data-target="#date" data-toggle="datetimepicker"/>
+                                            </div>
+                                        </div>
+                                            <div class="form-group">
+                                                <div class="time" id="time" data-target-input="nearest">
+                                                    <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Time" data-target="#time" data-toggle="datetimepicker"/>
+                                                </div>
+                                            </div>
+                                <div class="form-group">
+                                    <select class="form-control border-0 p-5" style="height: 47px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="1">Service 1</option>
+                                        <option value="2">Service 1</option>
+                                        <option value="3">Service 1</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button class="form-btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- paragraf side -->
+                        <div class="form-para">
+
+                            <div>
+                                <p class="book-line-1">Going for a vacation?</p>
+                                <p class="book-line-2">Book For <span>Your Pet</span></p>
+                                <p class="book-line-3">Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima 
+                                    ipsum lorem rebum</p>
+                            </div>
+                                    <div class="d-flex book-icon-sub">
+                                            <div class="book-icon-sub-1">
+                                                    <div class="book-pet-container">
+                                                        <p class="book-pet-title"><i class="fa-solid book-icon fa-hotel"></i> Pet Boarding</p>
+                                                        <p class="book-child-text">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                                    </div>
+                                                    <div class="book-pet-container mt-30">
+                                                        <p class="book-pet-title"><i class="fa-solid book-icon fa-bone"></i> Pet Feeding</p>
+                                                        <p class="book-child-text">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                                    </div>
+                                            </div>
+
+                                            <div class="book-icon-sub-2">
+                                                <div class="book-pet-container">
+                                                    <p class="book-pet-title"><i class="fa-solid book-icon fa-hand-scissors"></i> Pet Grooming</p>
+                                                    <p class="book-child-text">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                                </div>
+                                                <div class="book-pet-container mt-30">
+                                                    <p class="book-pet-title"><i class="fa-solid book-icon fa-gear"></i> Pet Tranning</p>
+                                                    <p class="book-child-text">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                                </div>
+                                            </div>                                      
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    <!-- booking-end -->
+
+    <!--  about-us-start (section-4) -->
+
+            <div class="about-container d-flex">
+
+                <div class="about-contain">
+                    <p class="about-line-1">About Us</p>
+                    <p class="about-line-2">Boarding <span class="and">&</span> <span class="daycare">Daycare</span></p>
+                    <p class="about-line-3">Amet stet amet ut. Sit no vero vero no dolor. Sed erat ut sea. Just clita ut stet kasd at diam sit erat vero sit.</p>
+                    <p class="about-line-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                
+                    <div class="d-flex">
+                        <div>
+                        <p class="about-icon"><i class="fa-solid about-inicon fa-check-double"></i> Best In Industry</p>
+                        <p class="about-icon"><i class="fa-solid about-inicon fa-check-double"></i> Emergency Services</p>
+                        <p class="about-icon"><i class="fa-solid about-inicon fa-check-double"></i> 24/7 Customer Support</p>
+                        <button class="about-btn">Learn More</button>
+                        </div>
+                        <div>
+                            <div class="about-count">
+                                <div class="about-flex">
+                                    <div class="flex-num">
+                                        <h1 id="num5" class="count-line-1">18</h1>
+                                        <h3 class="count-line-2">Years + <br>Experience</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>  
+                </div>
+
+                <div class="about-img">
+                    <img src="./img/about-1.jpg" height="295.33px" width="447px" class="about-img-1">
+                    <img src="./img/about-2.jpg" height="169.81px" width="221.5px" class="about-img-2">
+                    <img src="./img/about-3.jpg" height="169.81px" width="221.5px" class="about-img-3">
+                </div>
+            </div>
+    <!--  about-us-end  -->
+
+    <!-- service-start (section-5)-->
+
+    <div class="service-container">
+
+        <div class="service-contain">
+                <p class="service-line-1">Our Services</p>
+                <p class="service-line-2">Premium <span>Pet Services</span></p>
+        </div>
+
+        <div class="mt-50">
+                <div class="d-flex justify-center service-contain-2">
+                        <div class="service-box-container">
+                            <div>
+                                <p class="sbox-line-1"><i class="fa-solid service-icon fa-hotel"></i></p>
+                                <p class="sbox-line-2">Pet Boarding</p>
+                                <p class="sbox-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                                <p class="sbox-line-4">READ MORE</p>
+                            </div>
+                        </div>
+
+                        <div class="service-box-container">
+                            <div>
+                                <p class="sbox-line-1"><i class="fa-solid service-icon fa-bone"></i></p>
+                                <p class="sbox-line-2">Pet Feeding</p>
+                                <p class="sbox-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                                <p class="sbox-line-4">READ MORE</p>
+                            </div>
+                        </div>
+
+                        <div class="service-box-container">
+                            <div>
+                                <p class="sbox-line-1"><i class="fa-solid service-icon fa-hand-scissors"></i></p>
+                                <p class="sbox-line-2">Pet Grooming</p>
+                                <p class="sbox-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                                <p class="sbox-line-4">READ MORE</p>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="d-flex justify-center service-contain-2">
+                    <div class="service-box-container">
+                        <div>
+                            <p class="sbox-line-1"><i class="fa-solid service-icon fa-gear"></i> </p>
+                            <p class="sbox-line-2">Pet Training</p>
+                            <p class="sbox-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                            <p class="sbox-line-4">READ MORE</p>
+                        </div>
+                    </div>
+
+                    <div class="service-box-container">
+                        <div>
+                            <p class="sbox-line-1"><i class="fa-solid service-icon fa-dumbbell"></i></p>
+                            <p class="sbox-line-2">Pet Exercise</p>
+                            <p class="sbox-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                            <p class="sbox-line-4">READ MORE</p>
+                        </div>
+                    </div>
+
+                    <div class="service-box-container">
+                        <div>
+                            <p class="sbox-line-1"><i class="fa-solid service-icon fa-syringe"></i></p>
+                            <p class="sbox-line-2">Pet Treatment</p>
+                            <p class="sbox-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                            <p class="sbox-line-4">READ MORE</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- service-end -->
+
+    <!-- choose-menu-start (section-6)-->
+
+    <div class="choose-container">
+
+        <div class="d-flex choose-media">
+                <div class="choose-contain-1">
+                    <img src="./img/feature.jpg" height="500px" width="445px">
+                </div>
+
+                <div class="choose-contain-2">
+                    <p class="choose-line-1">Why Choose Us?</p>
+                    <p class="choose-line-2">Special Care <span>On Pets</span></p>
+                    <p class="choose-line-3">Dolor lorem lorem ipsum sit et ipsum. Sadip sea amet diam sed ut vero no sit. Et elitr stet sed sit sed kasd. Erat duo eos et erat sed diam duo</p>
+                    
+                    <div class="d-flex">
+                        <div>
+                            <p class="choose-title"><i class="fa-solid book-icon-2 fa-cat"></i> Best In Industry</p>
+                            <p class="choose-title mt-30"><i class="fa-solid book-icon-2 fa-truck-medical"></i> Emergency Services</p>
+                        </div>
+
+                        <div>
+                            <p class="choose-title"><i class="fa-solid book-icon-2 fa-hands-holding-child"></i> Special Care</p>
+                            <p class="choose-title mt-30"><i class="fa-solid book-icon-2 fa-envelope"></i> Customer Support</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- choose-menu-end -->
+
+    <!-- price-start (section-7)-->
+
+    <div class="price-head">
+
+            <div class="price-container">
+                <p class="price-line-1">Pricing Plan</p>
+                <p class="price-line-2">Choose the <span>Best Price</span></p>
+            </div>
+
+            <div class="d-flex justify-center price-media">
+                <div class="price-box-1">
+                    <div class="relative price-bg">
+                        <div class="price-text">
+                            <p class="p-line-1">Basic</p>
+                            <p class="p-line-2"><sup>$</sup>49<span>/ Mo</span></p>
+                        </div>
+                    </div>
+                    <div class="price-details">
+                        <p class="details-line-1"><i class="fa-solid fa-check"></i> Feeding</p>
+                        <p class="details-line-2"><i class="fa-solid fa-check"></i> Boarding</p>
+                        <p class="details-line-3"><i class="fa-solid fa-xmark"></i> Spa & Grooming</p>
+                        <p class="details-line-4"><i class="fa-solid fa-xmark"></i> Veterinary Medicine</p>
+                    </div>
+                    <button class="price-btn">Signup Now</button>
+                </div>
+
+                <div class="price-box-1">
+                    <div class="relative price-bg-2">
+                        <div class="price-text">
+                            <p class="p-line-1-green">Standard</p>
+                            <p class="p-line-2"><sup>$</sup>99<span>/ Mo</span></p>
+                        </div>
+                    </div>
+                    <div class="price-details">
+                        <p class="details-line-1"><i class="fa-solid fa-check"></i> Feeding</p>
+                        <p class="details-line-2"><i class="fa-solid fa-check"></i> Boarding</p>
+                        <p class="details-line-3"><i class="fa-solid fa-check"></i> Spa & Grooming</p>
+                        <p class="details-line-4"><i class="fa-solid fa-xmark"></i> Veterinary Medicine</p>
+                    </div>
+                    <button class="price-btn-green">Signup Now</button>
+                </div>
+
+                <div class="price-box-1">
+                    <div class="relative price-bg-3">
+                        <div class="price-text">
+                            <p class="p-line-1">Premium</p>
+                            <p class="p-line-2"><sup>$</sup>149<span>/ Mo</span></p>
+                        </div>
+                    </div>
+                    <div class="price-details">
+                        <p class="details-line-1"><i class="fa-solid fa-check"></i> Feeding</p>
+                        <p class="details-line-2"><i class="fa-solid fa-check"></i> Boarding</p>
+                        <p class="details-line-3"><i class="fa-solid fa-check"></i> Spa & Grooming</p>
+                        <p class="details-line-4"><i class="fa-solid fa-check"></i> Veterinary Medicine</p>
+                    </div>
+                    <button class="price-btn">Signup Now</button>
+                </div>
+            </div>
+    </div>
+    <!-- price-over -->
+
+    <!-- team-menu-start (section-8)-->
+
+    <div class="team-container">
+        <div class="price-container">
+            <p class="price-line-1">Team Member</p>
+            <p class="price-line-2">Meet Our <span>Team Member</span></p>
+        </div>
+
+        <div class="d-flex justify-center team-media">
+            <div class="member-media d-flex">
+                <div class="member-img">
+                    <img src="./img/team-1.jpg" width="255px" height="297px" class="team-img">
+                    <div>
+                        <p class="team-line-1">Mollie Ross</p>
+                        <p class="team-line-2">Founder & CEO</p>
+                    </div>
+                </div>
+                <div class="member-img">
+                    <img src="./img/team-2.jpg" width="255px" height="297px" class="team-img">
+                    <div>
+                        <p class="team-line-1">Jennifer Page</p>
+                        <p class="team-line-2">Chief Executive</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-media-2 d-flex">
+                <div class="member-img">
+                    <img src="./img/team-3.jpg" width="255px" height="297px" class="team-img">
+                    <div>
+                        <p class="team-line-1">Kate Glover</p>
+                        <p class="team-line-2">Doctor</p>
+                    </div>
+                </div>
+                <div class="member-img">
+                    <img src="./img/team-4.jpg" width="255px" height="297px" class="team-img">
+                    <div>
+                        <p class="team-line-1">Lilly Fry</p>
+                        <p class="team-line-2">Trainer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- team-menu-end -->
+
+    <!-- feedback-start (section-9) slider-swiper-->
+
+    
+    <div class="feedback-container">
+        <div class="price-container">
+            <p class="price-line-1">Testimonial</p>
+            <p class="price-line-2">Our Client <span>Says</span></p>
+        </div>
+
+            <div class="swiper mySwiper">
+                    <div class="d-flex justify-center feed-media swiper-wrapper">
+
+                            <div class="feed-box swiper-slide">
+                                <div class="d-flex">
+                                    <img src="./img/testimonial-1.jpg" height="80px" width="80px">
+                                    <div>
+                                        <p class="feed-line-1">Client Name</p>
+                                        <p class="feed-line-2">Profession</p>
+                                    </div>
+                                </div>
+                                <p class="feed-line-3">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                            </div>
+                            <div class="feed-box swiper-slide">
+                                <div class="d-flex">
+                                    <img src="./img/testimonial-2.jpg" height="80px" width="80px">
+                                    <div>
+                                        <p class="feed-line-1">Client Name</p>
+                                        <p class="feed-line-2">Profession</p>
+                                    </div>
+                                </div>
+                                <p class="feed-line-3">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                            </div>
+                            <div class="feed-box swiper-slide">
+                                <div class="d-flex">
+                                    <img src="./img/testimonial-3.jpg" height="80px" width="80px">
+                                    <div>
+                                        <p class="feed-line-1">Client Name</p>
+                                        <p class="feed-line-2">Profession</p>
+                                    </div>
+                                </div>
+                                <p class="feed-line-3">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                            </div>  
+                            <div class="feed-box swiper-slide">
+                                <div class="d-flex">
+                                    <img src="./img/testimonial-4.jpg" height="80px" width="80px">
+                                    <div>
+                                        <p class="feed-line-1">Client Name</p>
+                                        <p class="feed-line-2">Profession</p>
+                                    </div>
+                                </div>
+                                <p class="feed-line-3">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                            </div>
+                            <div class="feed-box swiper-slide">
+                                <div class="d-flex">
+                                    <img src="./img/testimonial-1.jpg" height="80px" width="80px">
+                                    <div>
+                                        <p class="feed-line-1">Client Name</p>
+                                        <p class="feed-line-2">Profession</p>
+                                    </div>
+                                </div>
+                                <p class="feed-line-3">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                            </div>
+                            <div class="feed-box swiper-slide">
+                                <div class="d-flex">
+                                    <img src="./img/testimonial-2.jpg" height="80px" width="80px">
+                                    <div>
+                                        <p class="feed-line-1">Client Name</p>
+                                        <p class="feed-line-2">Profession</p>
+                                    </div>
+                                </div>
+                                <p class="feed-line-3">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                            </div>
+                            <div class="feed-box swiper-slide">
+                                <div class="d-flex">
+                                    <img src="./img/testimonial-3.jpg" height="80px" width="80px">
+                                    <div>
+                                        <p class="feed-line-1">Client Name</p>
+                                        <p class="feed-line-2">Profession</p>
+                                    </div>
+                                </div>
+                                <p class="feed-line-3">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                            </div>
+                    </div> 
+
+                    <div style="margin-top: 35px; font-size: 10px ; display: flex; justify-content: center; align-items: center;">
+                        <i class="fa-solid fa-circle ml-1" style="color: #ed6436; font-size: 12px;"></i>
+                        <i class="fa-solid fa-circle ml-1"></i>
+                        <i class="fa-solid fa-circle ml-1"></i>
+                        <i class="fa-solid fa-circle ml-1"></i>
+                    </div>
+            </div>
+    </div>
+    <!-- feedback-end -->
+
+    <!-- pet-blog-start (section-10)-->
+
+    <div class="blog-container">
+        <div class="price-container">
+            <p class="price-line-1">Pet Blog</p>
+            <p class="service-line-2">Updates <span> From Blog</span></p>
+        </div>
+
+        <div class="blog-box d-flex justify-center">
+                <div class="blog-content">
+                    <img src="./img/blog-1.jpg" width="350px" height="233px" class="blog-img">
+
+                    <div class="blog-line-content">
+                            <p class="blog-line-1">Diam amet eos at no eos</p>
+                            <div class="d-flex blog-line-2">
+                                <p><i class="fa-solid fa-user"></i> Admin</p>
+                                <p><i class="fa-solid fa-folder"></i> Web Design</p>
+                                <p><i class="fa-solid fa-comment"></i> 15</p>
+                            </div>
+                            <p class="blog-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit vero stet justo</p>
+                            <p class="blog-line-4">Read More</p>
+                    </div>
+                </div>
+
+                <div class="blog-content">
+                    <img src="./img/blog-2.jpg" width="350px" height="233px" class="blog-img">
+
+                    <div class="blog-line-content">
+                            <p class="blog-line-1">Diam amet eos at no eos</p>
+                            <div class="d-flex blog-line-2">
+                                <p><i class="fa-solid fa-user"></i> Admin</p>
+                                <p><i class="fa-solid fa-folder"></i> Web Design</p>
+                                <p><i class="fa-solid fa-comment"></i> 15</p>
+                            </div>
+                            <p class="blog-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit vero stet justo</p>
+                            <p class="blog-line-4">Read More</p>
+                    </div>
+                </div>
+
+                <div class="blog-content">
+                    <img src="./img/blog-3.jpg" width="350px" height="233px" class="blog-img">
+
+                    <div class="blog-line-content">
+                            <p class="blog-line-1">Diam amet eos at no eos</p>
+                            <div class="d-flex blog-line-2">
+                                <p><i class="fa-solid fa-user"></i> Admin</p>
+                                <p><i class="fa-solid fa-folder"></i> Web Design</p>
+                                <p><i class="fa-solid fa-comment"></i> 15</p>
+                            </div>
+                            <p class="blog-line-3">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit vero stet justo</p>
+                            <p class="blog-line-4">Read More</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- pet-blog-end -->
+
+    <!-- counter-menu-start (section-11)-->
+
+    <div class="counter-menu">
+            <div class="flex">
+                <div class="flex-num">
+                    <h1 id="num">70+</h1>
+                    <h3>Pet Services</h3>
+                </div>
+                <div class="flex-num">
+                    <h1 id="num">435+</h1>
+                    <h3>Care on Pets</h3>
+                </div>
+                <div class="flex-num">
+                    <h1 id="num">220+</h1>
+                    <h3>Happy Clients</h3>
+                </div>
+                <div class="flex-num">
+                    <h1 id="num4">45</h1>
+                    <h3>Team Member</h3>
+                </div>
+            </div>
+    </div>
+    <!-- counter-menu-end -->
+
+    <!-- canvas-start -->
+        <!-- tsParticles container -->
+<!-- <div id="tsparticles"></div>
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script> -->
+    <!-- canvas-end -->
+
+    <!-- footer (section-12)-->
+
+    <footer>
+
+        <div class="d-flex justify-center footer-media">
+
+            <div class="f-01">
+                <div class="logo2 d-flex">
+                    <p>Pet</p><span>Lover</span>
+                </div>
+
+                <div class="f1-line-1">
+                    Ipsum amet sed vero et lorem stet eos ut, labore sed sed stet sea est ipsum ut. Volup amet ea sanct ipsum, dolore vero lorem no duo eirmod. Eirmod amet ipsum no ipsum lorem clita ut. Ut sed sit lorem ea lorem sed, amet stet sit sea ea diam tempor kasd kasd. Diam nonumy etsit tempor ut sed diam sed et ea.
+                </div>
+            </div>
+
+            <div class="f-02">
+                <p class="f02-line-1">Get In Touch</p>
+                <p class="f02-line-2"><i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA</p>
+                <p class="f02-line-2"><i class="fa-solid fa-phone"></i> +012 345 67890</p>
+                <p class="f02-line-2"><i class="fa-solid fa-envelope"></i> info@example.com</p>
+
+                <div class="f02-icon">
+                    <i class="fa-brands f02-in fa-twitter"></i>
+                    <i class="fa-brands f02-in f02-in-2 fa-facebook-f"></i>
+                    <i class="fab f02-in f02-in-3 fa-linkedin-in"></i>
+                    <i class="fab f02-in f02-in-3 fa-instagram"></i>
+                </div>
+            </div>
+
+            <div class="f-03">
+                <p class="f03-line-1">Popular Links</p>
+
+                <p class="f03-line-2"> <i class="fa-solid fa-angle-right"></i> Home</p>
+                <p class="f03-line-2"> <i class="fa-solid fa-angle-right"></i> About Us</p>
+                <p class="f03-line-2"> <i class="fa-solid fa-angle-right"></i> Our Services</p>
+                <p class="f03-line-2"> <i class="fa-solid fa-angle-right"></i> Our Team</p>
+                <p class="f03-line-2"> <i class="fa-solid fa-angle-right"></i> Contact Us</p>
+            </div>
+
+            <div class="f-04">
+                <p class="f03-line-1">Newsletter</p>
+
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control-2 border-0 p-4" placeholder="Your Name" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control-2 mt-20 border-0 p-4" placeholder="Your Email" required="required" />
+                    </div>
+                    <button class="footer-btn">Submit Now</button>
+                </form>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="last-line d-flex">
+        <div class="last-line-1">
+            <p>© Your Site Name. All Rights Reserved. Designed by HTML Codex</p>
+        </div>
+
+        <div class="last-line-2 d-flex">
+            <p>Privacy</p>
+            <p>Terms</p>
+            <p>FAQs</p>
+            <p>Help</p>
+        </div>
+    </div>
+
+
+
+
+<!------------------------------------------------- J-Query --------------------------------------------------->
+<!-------------------------------------------------- Script --------------------------------------------------->
+
+<!-- // loader -->
+    <script>  
+            $(".loader").delay(2500).fadeOut("fast");
+
+            $(window).scroll(function(){
+
+                if($(this).scrollTop()>1){
+                    $('.nav-bar').addClass('sticky');
+                }else {
+                    $('.nav-bar').removeClass('sticky');
+                }
+            });
+    </script>
+
+<!-- // Scroll-Top -->
+    <script>
+        $(window).scroll(function(){
+        if($(this).scrollTop() > 100){
+            $('.scroll').fadeIn('slow');
+        } else {
+            $('.scroll').fadeOut('slow');
+        }    
+        });
+
+        function getontop(){
+            document.documentElement.scrollTop = 0;      
+        }
+    </script>
+
+<!-- // Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- // Swiper-Script -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            slidesToshow:3,
+            slidesToscroll:3,
+            centerMode: true,
+
+        pagination: {
+
+            el: ".swiper-pagination",
+            clickable: true,
+        },    
+        });
+    </script>
+
+<!-- // pointer-mouse -->
+            <script>
+                    const circles = document.querySelectorAll(".pointer");
+
+                onmousemove = (e)=>{ 
+                circles.forEach((circle, index) =>{   
+                    setTimeout(()=>{
+                    
+                    circle.style.left = `${e.clientX - circle.clientWidth/2}px`;
+                    
+                    circle.style.top = `${e.clientY - circle.clientHeight/2 }px`;  
+                    }, index * 30);
+                });
+                };
+            </script>
+
+
+<!-- // counter-menu -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="/js/countMe/countMe.min.js"></script>
+
+        <script>
+            window.onload = ()=>{
+                // $(selector).countMe(delay,speed)
+                $("#num1").countMe(80,180);
+                $("#num2").countMe(30, 30);
+                $("#num3").countMe(40, 50);
+                $("#num4").countMe(100,200);
+                $("#num5").countMe(80,180);
+            }
+        </script>
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-36251023-1']);
+            _gaq.push(['_setDomainName', 'jqueryscript.net']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+<!-- // Header-Toggle -->
+        <script>
+            $(document).ready(function(){
+                $('.toggle').click(function(){
+                    $('.navigation').slideToggle('slow');
+                });
+            });
+        </script>
+
+       <!-- canvas -->
+    <script>
+       tsParticles.load("tsparticles", {
+        fpsLimit: 60,
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 700
+            }
+          },
+          color: {
+            value: "#ff0000",
+            animation: {
+              enable: true,
+              speed: 20,
+              sync: true
+            }
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000"
+            },
+            polygon: {
+              nb_sides: 5
+            },
+            image: {
+              src: "https://cdn.matteobruni.it/images/particles/github.svg",
+              width: 100,
+              height: 100
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 3,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 20,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 100,
+            color: "random",
+            opacity: 0.4,
+            width: 1,
+            triangles: {
+              enable: true,
+              color: "#ffffff",
+              opacity: 0.1
+            }
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse"
+            },
+            onclick: {
+              enable: true,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 0.8,
+              speed: 3
+            },
+            repulse: {
+              distance: 200
+            },
+            push: {
+              particles_nb: 4
+            },
+            remove: {
+              particles_nb: 2
+            }
+          }
+        },
+        retina_detect: true,
+        background: {
+          color: "#000000",
+          image: "",
+          position: " 50%",
+          repeat: "no-repeat",
+          size: "cover"
+        }
+      });
+      
+</script>
+</body>
+</html>
